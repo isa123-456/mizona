@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'Qeiza';
+  src: url('fonts/qeiza.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qeiza';
+  src: url('fonts/qeiza-italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alakita';
+  src: url('fonts/Alakita.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1{
+   
+   font-family: 'Qeiza', cursive;
+   font-size: 200px;
+}
+
+h2{
+
+font-family: 'Qeiza', cursive;
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  margin: 0;                 /* sin margen: el fondo llena toda la pantalla */
+  background: #1e1b4b;       /* fondo */
+  color: #f1f5f9;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin-left: 350px;
+  margin-right: 200px;
+  margin-top: 10px;
+  margin-bottom: 50px; 
+  text-align: center;         /* márgenes laterales solo para el contenido */
+  padding: 0 2rem;           /* espacio interno para el texto */
+}
+
+.contenedor-nav {
+  max-width: 1000px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 15px;
+  margin-bottom: 10px;          /* márgenes laterales solo para el contenido */
+  padding: 0 1rem;           /* espacio interno para el texto */
+}
+
+/* El header solo se encarga del fondo (ocupa todo el ancho) */
+header {
+  background: url('img/img1.jpg') center / cover no-repeat;
+  padding: 12rem 0;
+}
+
+/* El contenido (texto) va aparte, centrado y con su propio estilo */
+.header-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  color: white;   /* color del texto, independiente del fondo */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown {
+  position: relative;          /* el submenú se posiciona respecto a este */
+}
+
+/* El submenú: oculto por defecto */
+.dropdown-contenido {
+  display: none;
+  position: absolute;
+  top: 100%;                   /* justo debajo del botón */
+  left: 0;
+  min-width: 180px;
+  background: #1e1b4b;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;                 /* para que quede encima del contenido */
+  overflow: hidden;
+}
+
+.dropdown-contenido a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: white;
+}
+
+.dropdown-contenido a:hover {
+  background: #4f46e5;
+}
+
+/* Mostrar al pasar el mouse */
+.dropdown:hover .dropdown-contenido {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+}
+.hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+button:hover { background: #4338ca; transform: scale(1.05); }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #666;
+}
